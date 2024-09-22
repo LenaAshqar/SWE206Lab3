@@ -4,9 +4,19 @@ public class App {
         System.out.println("Hello Nermin");
     }
 
-    public static void readStudents(<String> students) {
-        for (i=0; i < students.length; i++) {
+    
+    public static void readStudents(String[] students) {
+        for (int i = 0; i < students.length ; i++) {
             System.out.println(students[i]);
         }
+    }
+
+    public static String[] createRandomStudents() {
+        int length = (int) (Math.random()*10);
+        String[] students = new String[length];
+        for (int i=0; i < length ; i++) {
+            students[i] = "Student " + (int) (Math.random()*200);
+        }
+        return students;
     }
 }
